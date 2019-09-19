@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+    <h1>Garages</h1>
+    <hr>
+
+    <ul>
+
+        {% for garage in garage %}
+            <h2><a href="{% url 'garage_cars' garage.pk%}">{{ garage.name }}</a></h2>
+
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}
